@@ -79,7 +79,9 @@ RegisterCommand('stopAttack', function(source, args, rawCommand) -- Stops the at
     if attacking then
 	attacking = false
 	ClearPedTasks(animal)
-	TaskGoToEntity(animal, PlayerPedId(), -1, 0.0, 10.0, 1073741824.0, 0)
+	if Config.PetFollow then
+		TaskGoToEntity(animal, PlayerPedId(), -1, 0.0, 10.0, 1073741824.0, 0)
+	end
     else
         SetNotificationTextEntry("STRING")
         AddTextComponentString("~r~Pet isn't actively attacking.")
