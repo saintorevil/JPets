@@ -18,6 +18,7 @@ There are two commands that are supported with this, those being:
 
 * createPet \<petname> -- Does what it says (pet name set in config.lua).
 * tpPet -- TPs your pet (if active)
+* stopAttack -- Stops the current attack (if any)
 
 ## Video Preview:
 https://www.youtube.com/watch?v=-HOYg66dzZc
