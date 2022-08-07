@@ -75,7 +75,7 @@ RegisterCommand('tpPet', function(source, args, rawCommand)
     end
 end)
 
-RegisterCommand('stopAttack', function(source, args, rawCommand)
+RegisterCommand('stopAttack', function(source, args, rawCommand) -- Stops the attack, duh
     if attacking then
 	attacking = false
 	ClearPedTasks(animal)
