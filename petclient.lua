@@ -83,7 +83,7 @@ Citizen.CreateThread(function()
         while true do
             local aimingatentity, entity = GetEntityPlayerIsFreeAimingAt(PlayerId(-1))
             attacking = false
-            if animal ~= nil and not attacking and aimingatentity and IsEntityAPed(entity) and GetEntityHealth(entity) and GetEntityModel(animal) ~= GetEntityModel(entity) ~= 0 then
+            if animal ~= nil and not attacking and aimingatentity and IsEntityAPed(entity) and GetEntityHealth(entity) ~= 0 and animal ~= entity then
                 DrawMarker(0, GetEntityCoords(entity).x, GetEntityCoords(entity).y, GetEntityCoords(entity).z + 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, r, g, b, a, true, true, 2, false, false, false, false)
                 if IsControlPressed(1, 51) then
                     if entity == animal then
