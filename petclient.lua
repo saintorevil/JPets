@@ -75,6 +75,18 @@ RegisterCommand('tpPet', function(source, args, rawCommand)
     end
 end)
 
+RegisterCommand('stopAttack', function(source, args, rawCommand)
+    if attacking then
+	attacking = false
+	ClearPedTasks(animal)
+	TaskGoToEntity(animal, PlayerPedId(), -1, 0.0, 10.0, 1073741824.0, 0)
+    else
+        SetNotificationTextEntry("STRING")
+        AddTextComponentString("~r~Pet isn't actively attacking.")
+        DrawNotification(true, false)
+    end
+end)
+
 Citizen.CreateThread(function()
     firstrun = true
     animal = nil
