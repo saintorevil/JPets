@@ -15,7 +15,7 @@ RegisterCommand('createPet', function(source, args, rawCommand)
 
         RequestModel(GetHashKey(Animals[string.lower(args[1])]))
 
-	while not HasModelLoaded(animal) do
+	while not HasModelLoaded(GetHashKey(Animals[string.lower(args[1])])) do
 	    Citizen.Wait(0)
 	end
 
