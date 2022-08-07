@@ -3,8 +3,6 @@
 
  A simple standalone pets resource for FiveM
 
-**This is my first ever FiveM release.**
-
 With JPets, players can spawn in a range of animals (where **you** can configure it) which can attack and follow. This was mostly made for vMenu servers that want to implement pets someway (but feel free to use it anywhere you want).
 
 ## Usage
